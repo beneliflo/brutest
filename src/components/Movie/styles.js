@@ -14,15 +14,34 @@ const MovieStyled = styled.a`
   }
 
   .rate {
+    background-color: ${colors['dark-80']};
+    color: ${colors['white-67']};
+    font-size: 12px;
+    font-weight: 900;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 6px;
+    right: 6px;
+    border-radius: 3px;
+    padding: 5px 15px;
   }
 
   .title {
     position: absolute;
-    bottom: 0;
+    bottom: 12px;
+    left: 12px;
     margin: 0;
+    color: ${colors['ice-blue']};
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  &:hover {
+    img {
+      -webkit-filter: grayscale(0%);
+      filter: grayscale(0%);
+
+      transition: filter .5s
+    }
   }
 `
 export default MovieStyled

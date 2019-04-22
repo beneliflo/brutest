@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from "axios";
 
 import Movie from '../Movie'
+import TopStyled from './styles'
 
 const { API_KEY } = process.env
 const API_URL = 'https://api.themoviedb.org/3/movie/top_rated'
@@ -22,12 +23,15 @@ class TopRated extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Top rated</h1>
-        {this.state.posts.map((m, i) =>
-          <Movie key={i} item={m} />
-        )}
-      </div>
+      <TopStyled>
+        <p className='title-list'>Top rated</p>
+
+        <div className='content-list'>
+          {this.state.posts.map((m, i) =>
+            <Movie key={i} item={m} />
+          )}
+        </div>
+      </TopStyled>
     );
   }
 }

@@ -10,6 +10,7 @@ const MovieCard = props => {
     <MovieStyled href='/'>
       <img
         src={`${process.env.GATSBY_SITE_ASSETS_URL}${poster_path}`}
+        alt='movie'
       />
       <span className='rate'>{vote_average}</span>
       <h3 className='title'>{truncStr(title, 10)}</h3>
