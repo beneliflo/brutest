@@ -1,9 +1,13 @@
 import Header from './Header'
 import Search from './Search'
-import Suggestions from './Suggestions'
+import Movies from './Movies'
+import Movie from './Movie'
+import TopRated from './TopRated'
 
 export {
   Header,
   Search,
-  Suggestions
+  Movies,
+  Movie,
+  TopRated
 }

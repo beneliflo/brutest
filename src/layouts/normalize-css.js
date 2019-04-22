@@ -89,6 +89,7 @@ const NormalizeCSS = createGlobalStyle`
   }
   img {
     border-style: none;
+    vertical-align: middle;
   }
   svg:not(:root) {
     overflow: hidden;
