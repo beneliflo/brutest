@@ -4,6 +4,8 @@ import { search } from "../../layouts/utils";
 import Movies from '../Movies'
 import TopRated from '../TopRated'
 
+import SearchStyled from './styles'
+
 const { API_KEY } = process.env
 const API_URL = 'https://api.themoviedb.org/3/search/movie'
 
@@ -41,14 +43,22 @@ class Search extends Component {
 
   render() {
     return (
-      <div>
-        <input
-          value={this.state.value}
-          onChange={e => this.onChangeHandler(e)}
-          placeholder="Type something to search"
-        />
+      <SearchStyled>
+        <div className='search-bar'>
+          <span className='search-logo'>
+            <span className='search-circle'></span>
+            <span className='search-rect'></span>
+          </span>
+          <input
+            type='search'
+            value={this.state.value}
+            onChange={e => this.onChangeHandler(e)}
+            placeholder="Movie search"
+          />
+        </div>
+
         {this.renderMovies}
-      </div>
+      </SearchStyled>
     );
   }
 }

@@ -6,6 +6,7 @@ const MovieStyled = styled.a`
   border-radius: 3px;
   overflow: hidden;
   position: relative;
+  margin-bottom: 2rem;
 
   img {
     -webkit-filter: grayscale(95%);
@@ -33,6 +34,7 @@ const MovieStyled = styled.a`
     color: ${colors['ice-blue']};
     font-size: 24px;
     font-weight: 700;
+    text-shadow: 2px 2px 4px ${colors['black-80']};
   }
 
   &:hover {

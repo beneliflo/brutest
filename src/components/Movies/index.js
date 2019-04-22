@@ -1,6 +1,7 @@
 import React from "react";
 
 import Movie from "../Movie";
+import MoviesStyled from './styles'
 
 const Movies = ({ list }) => {
   let cards = <h3>Loading...</h3>;
@@ -10,9 +11,9 @@ const Movies = ({ list }) => {
   }
 
   return (
-    <div>
-      <div>{cards}</div>
-    </div>
+    <MoviesStyled>
+      {cards}
+    </MoviesStyled>
   );
 };
 
