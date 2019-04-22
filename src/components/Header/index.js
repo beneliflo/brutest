@@ -1,15 +1,12 @@
 import PropTypes from "prop-types"
 import React from "react"
 
-import Search from '../Search'
-
 const Header = ({ siteTitle }) => (
   <header>
     <div>
       <h1>
         {siteTitle}
       </h1>
-      <Search />
     </div>
   </header>
 )
