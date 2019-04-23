@@ -1,14 +1,18 @@
 import styled from 'styled-components'
 import { colors } from '../../layouts/theme'
 
-const MovieStyled = styled.a`
-  display: inline-block;
-  border-radius: 3px;
-  overflow: hidden;
-  position: relative;
-  margin-bottom: 2rem;
+const MovieStyled = styled.div`
 
-  img {
+  .movie-content {
+    display: inline-block;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 2rem;
+    cursor: pointer;
+  }
+
+  .movie-img {
     -webkit-filter: grayscale(95%);
     filter: grayscale(95%);
     margin: 0;
@@ -38,12 +42,97 @@ const MovieStyled = styled.a`
   }
 
   &:hover {
-    img {
+    .movie-img {
       -webkit-filter: grayscale(0%);
       filter: grayscale(0%);
 
       transition: filter .5s
     }
+  }
+
+  .popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: rgba(0,0,0, 0.5);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+  }
+
+  .popup-inner {
+    width: 95%;
+    max-width: 920px;
+    margin: auto;
+    background-color: ${colors.yellow};
+    border-radius: 5px;
+    padding: 40px;
+    overflow: hidden;
+    position: relative;
+
+    h4 {
+      text-transform: uppercase;
+      color: ${colors.black};
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      width: 28px;
+      height: 28px;
+      background-color: black;
+      border-radius: 50%;
+      cursor: pointer
+      border: 0;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      outline: none;
+    }
+  }
+
+  .popup-bgimage {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    opacity: .1;
+    background-size: cover;
+    pointer-events: none;
+  }
+
+  .popup-img {
+    margin: 0 auto;
+    display: block;
+    border-radius: 3px;
+    box-shadow: 0 0 5px 0 ${colors['black-50']};
+  }
+
+  .popup-title, .popup-year {
+    display: block;
+    text-align: center;
+  }
+
+  .popup-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .popup-year {
+    font-size: 16px;
+  }
+
+  .popup-description {
+    font-size: 14px;
   }
 `
 export default MovieStyled
