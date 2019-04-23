@@ -68,11 +68,13 @@ const MovieStyled = styled.div`
   .popup-inner {
     width: 95%;
     max-width: 920px;
+    max-height: 95%;
     margin: auto;
     background-color: ${colors.yellow};
     border-radius: 5px;
     padding: 40px;
     overflow: hidden;
+    overflow-y: auto;
     position: relative;
 
     h4 {
@@ -80,6 +82,7 @@ const MovieStyled = styled.div`
       color: ${colors.black};
       font-size: 14px;
       margin-bottom: 20px;
+      margin-top: 40px;
     }
 
     button {
@@ -133,6 +136,7 @@ const MovieStyled = styled.div`
 
   .popup-description {
     font-size: 14px;
+    margin-bottom: 0;
   }
 `
 export default MovieStyled
