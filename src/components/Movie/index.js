@@ -57,15 +57,17 @@ class Popup extends Component {
       <div className='popup'>
         <div className='popup-inner'>
           <div className='popup-bgimage' style={{ backgroundImage: `url(${this.props.bg})` }}></div>
-          <img
-            className='popup-img'
-            src={this.props.image}
-            alt='movie'
-          />
-          <h2 className='popup-title'>{this.props.title}</h2>
-          <span className='popup-year'>{this.props.year}</span>
-          <h4>Overview</h4>
-          <p className='popup-description'>{this.props.description}</p>
+          <div className='popup-data'>
+            <img
+              className='popup-img'
+              src={this.props.image}
+              alt='movie'
+            />
+            <h2 className='popup-title'>{this.props.title}</h2>
+            <span className='popup-year'>{this.props.year}</span>
+            <h4>Overview</h4>
+            <p className='popup-description'>{this.props.description}</p>
+          </div>
           <button onClick={this.props.closePopup}><BackIcon /></button>
         </div>
       </div>

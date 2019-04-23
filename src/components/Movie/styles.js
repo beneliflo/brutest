@@ -74,7 +74,6 @@ const MovieStyled = styled.div`
     border-radius: 5px;
     padding: 40px;
     overflow: hidden;
-    overflow-y: auto;
     position: relative;
 
     h4 {
@@ -110,6 +109,11 @@ const MovieStyled = styled.div`
     opacity: .1;
     background-size: cover;
     pointer-events: none;
+  }
+
+  .popup-data {
+    overflow-y: auto;
+    max-height: 80vh;
   }
 
   .popup-img {
