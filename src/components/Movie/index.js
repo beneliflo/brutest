@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import { truncStr } from "../../layouts/utils";
 import MovieStyled from './styles'
 
+import BackIcon from "./back_icon.js";
+
 class MovieCard extends Component {
 
   constructor() {
@@ -64,7 +66,7 @@ class Popup extends Component {
           <span className='popup-year'>{this.props.year}</span>
           <h4>Overview</h4>
           <p className='popup-description'>{this.props.description}</p>
-          <button onClick={this.props.closePopup}></button>
+          <button onClick={this.props.closePopup}><BackIcon /></button>
         </div>
       </div>
     );

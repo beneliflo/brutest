@@ -86,16 +86,17 @@ const MovieStyled = styled.div`
     }
 
     button {
-      width: 28px;
-      height: 28px;
-      background-color: black;
-      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      background-color: transparent;
       cursor: pointer
       border: 0;
       position: absolute;
       top: 20px;
       left: 20px;
       outline: none;
+      margin: 0;
+      padding: 0;
     }
   }
 
