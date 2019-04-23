@@ -13,7 +13,11 @@ const TopStyled = styled.div`
   .content-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
+
+    @media only screen and (min-width: 600px) {
+      justify-content: space-between;
+    }
   }
 `
 export default TopStyled
