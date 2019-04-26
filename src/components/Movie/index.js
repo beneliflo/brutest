@@ -64,7 +64,7 @@ class Popup extends Component {
               alt='movie'
             />
             <h2 className='popup-title'>{this.props.title}</h2>
-            <span className='popup-year'>{this.props.year}</span>
+            <span className='popup-year'>{this.props.year.substring(0,4)}</span>
             <h4>Overview</h4>
             <p className='popup-description'>{this.props.description}</p>
           </div>
