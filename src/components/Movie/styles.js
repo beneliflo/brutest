@@ -10,6 +10,14 @@ const MovieStyled = styled.div`
     position: relative;
     margin-bottom: 2rem;
     cursor: pointer;
+
+    &:hover {
+      .rate, .title {
+        transform: translateY(0);
+        opacity: 1;
+        transition: .5s;
+      }
+    }
   }
 
   .movie-img {
@@ -28,6 +36,8 @@ const MovieStyled = styled.div`
     right: 6px;
     border-radius: 3px;
     padding: 5px 15px;
+    transform: translateY(-100%);
+    opacity: 0;
   }
 
   .title {
@@ -35,10 +45,12 @@ const MovieStyled = styled.div`
     bottom: 12px;
     left: 12px;
     margin: 0;
-    color: ${colors['ice-blue']};
-    font-size: 24px;
+    color: white;
+    font-size: 20px;
     font-weight: 700;
     text-shadow: 2px 2px 4px ${colors['black-80']};
+    transform: translateY(100%);
+    opacity: 0;
   }
 
   &:hover {

@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 
-import { truncStr } from "../../layouts/utils";
 import MovieStyled from './styles'
 
-import BackIcon from "./back_icon.js";
+import BackIcon from './back_icon.js';
 
 class MovieCard extends Component {
 
@@ -32,7 +31,7 @@ class MovieCard extends Component {
             alt='movie'
           />
           <span className='rate'>{vote_average}</span>
-          <h3 className='title'>{truncStr(title, 10)}</h3>
+          <h3 className='title'>{title}</h3>
         </div>
 
         {this.state.showPopup ?
