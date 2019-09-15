@@ -1,4 +1,4 @@
-# brutest
+# Movie Library with React
 
 A simple search engine for movies from The Movie Database API built in ReactJS and GatsbyJS.
 
