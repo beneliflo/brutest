@@ -9,15 +9,15 @@ const API_URL = 'https://api.themoviedb.org/3/movie/top_rated'
 
 class TopRated extends Component {
   state = {
-    posts: []
+    posts: [],
+    pageNum: 2
   };
 
-  componentDidMount() {
-    axios.get(`${API_URL}?api_key=${API_KEY}&language=en-US&page=1`)
+  componentDidMount(pageNum) {
+    axios.get(`${API_URL}?api_key=${API_KEY}&language=en-US&page=${pageNum}`)
       .then(res => {
         const posts = res.data.results.map(obj => obj);
-        // console.log(res.data.results[3].original_title);
-        this.setState({ posts });
+        this.setState({ posts, pageNum });
       });
   }
 

@@ -20,16 +20,17 @@ class Search extends Component {
   search = async val => {
     this.setState({ loading: true });
     const results = await search(
-      `${API_URL}?api_key=${API_KEY}&language=en-US&query=${val}&page=1&include_adult=false`
+      `${API_URL}?api_key=${API_KEY}&language=en-US&query=${val}&include_adult=false&page=1`
     );
     const movies = results;
+
+    console.log(movies)
 
     this.setState({ movies, loading: false });
   };
 
   onChangeHandler = async e => {
     this.search(e.target.value);
-    this.setState({ value: e.target.value });
   };
 
   get renderMovies() {
@@ -40,6 +41,7 @@ class Search extends Component {
 
     return movies;
   }
+
 
   render() {
     return (
