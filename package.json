@@ -6,25 +6,26 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "axios": "^0.18.0",
-    "gatsby": "^2.3.25",
-    "gatsby-image": "^2.0.39",
-    "gatsby-plugin-manifest": "^2.0.29",
-    "gatsby-plugin-offline": "^2.0.25",
-    "gatsby-plugin-prefetch-google-fonts": "^1.4.2",
-    "gatsby-plugin-react-helmet": "^3.0.12",
-    "gatsby-plugin-react-svg": "^2.1.1",
-    "gatsby-plugin-sharp": "^2.0.35",
-    "gatsby-source-filesystem": "^2.0.29",
-    "gatsby-transformer-sharp": "^2.1.18",
-    "jquery": "^3.4.0",
+    "gatsby": "^2.15.15",
+    "gatsby-image": "^2.2.19",
+    "gatsby-plugin-manifest": "^2.2.16",
+    "gatsby-plugin-offline": "^3.0.6",
+    "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
+    "gatsby-plugin-react-helmet": "^3.1.7",
+    "gatsby-plugin-react-svg": "^2.1.2",
+    "gatsby-plugin-sharp": "^2.2.22",
+    "gatsby-source-filesystem": "^2.1.22",
+    "gatsby-transformer-sharp": "^2.2.14",
+    "gh-pages": "^2.1.1",
+    "jquery": "^3.4.1",
     "prop-types": "^15.7.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.0",
-    "styled-components": "^4.2.0"
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-helmet": "^5.2.1",
+    "styled-components": "^4.3.2"
   },
   "devDependencies": {
-    "prettier": "^1.17.0"
+    "prettier": "^1.18.2"
   },
   "keywords": [
     "gatsby"
@@ -36,7 +37,8 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "repository": {
     "type": "git",
